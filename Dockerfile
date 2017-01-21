@@ -10,8 +10,6 @@ RUN \
 	which &&\
 	yum clean all
         
-VOLUME /srv
-
 ADD index.php /var/www/html
 
 WORKDIR /var/www/html
