@@ -9,11 +9,13 @@ RUN \
 	php-mysql \
 	which &&\
 	yum clean all
-        
+
+RUN sed -i "s/#ServerName www.example.com:80/ServerName localhost:80/g" /etc/httpd/conf/httpd.conf
+
 ADD index.php /var/www/html
 
 WORKDIR /var/www/html
 
 EXPOSE 80
 
-CMD ["httpd"]
+CMD ["/usr/sbin/httpd"]
