@@ -1,8 +1,8 @@
 build:
-	sudo docker build -t caddy-php .
+	sudo docker build -t apache-php .
 
 run:
-	sudo docker run -d -p 80:80 -P --name test_caddy-php caddy-php
+	sudo docker run -d -p 80:80 -P --name test_apache-php apache-php
 
 stop:
 	sudo docker stop test_caddy-php 
