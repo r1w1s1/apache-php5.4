@@ -18,4 +18,7 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-CMD ["/usr/sbin/httpd"]
+ADD run-httpd.sh /run-httpd.sh
+RUN chmod -v +x /run-httpd.sh
+
+CMD ["/run-httpd.sh"]
