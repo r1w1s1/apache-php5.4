@@ -16,5 +16,4 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-ENTRYPOINT ["/usr/bin/caddy"]
-CMD ["--conf", "/etc/Caddyfile", "--log", "stdout"]
+CMD ["httpd"]
