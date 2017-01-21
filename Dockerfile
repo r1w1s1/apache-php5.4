@@ -10,7 +10,9 @@ RUN \
 	which &&\
 	yum clean all
 
-RUN sed -i "s/#ServerName www.example.com:80/ServerName localhost:80/g" /etc/httpd/conf/httpd.conf
+RUN \
+        sed -i "s/short_open_tag = Off/short_open_tag = On/g" /etc/php.ini &&\
+        sed -i "s/#ServerName www.example.com:80/ServerName localhost:80/g" /etc/httpd/conf/httpd.conf
 
 ADD index.php /var/www/html
 
