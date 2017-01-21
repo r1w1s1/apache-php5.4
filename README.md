@@ -1,7 +1,7 @@
 
 ## Apache Webserver with PHP Support
 
-A [Docker](http://docker.com) image for [Apache](https://www.apache.org/) based on [CentOS7](https://www.centos.org)
+A [CentOS7](https://www.centos.org) with Apache and PHP5.4
 
 
 ## Run the image
