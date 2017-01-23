@@ -8,7 +8,7 @@ A [CentOS7](https://www.centos.org) with Apache and PHP5.4
 
 
 ```sh
-$ sudo docker run -d -p 80:80 ricardson/apache-php
+$ sudo docker run -d -p 80:80 ricardson/apache-php5.4
 ```
 
 ## How to test?
