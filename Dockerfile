@@ -7,6 +7,8 @@ RUN \
 	yum -y install \
 	php \
 	php-mysql \
+	mod_ssl \
+	less \
 	which &&\
 	yum clean all
 
