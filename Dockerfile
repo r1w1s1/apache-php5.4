@@ -13,7 +13,8 @@ RUN \
 	yum clean all
 
 RUN \
-	yum -y python2-certbot-apache &&\
+	yum -y update &&\
+	yum -y install python2-certbot-apache &&\
         yum clean all
 
 RUN \
