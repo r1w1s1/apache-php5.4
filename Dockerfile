@@ -5,6 +5,7 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 RUN \
 	yum -y update &&\
 	yum -y install \
+	php \
 	php-mysql \
 	mod_ssl \
 	less \
