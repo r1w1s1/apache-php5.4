@@ -13,7 +13,7 @@ RUN \
 	yum clean all
 
 RUN \
-	yum -y python-certbot-apache
+	yum -y python-certbot-apache &&\
         yum clean all
 
 RUN \
