@@ -5,6 +5,8 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 RUN \
 	yum -y update &&\
 	yum -y install \
+	epel-release \
+	python-certbot-apache \
 	php \
 	php-mysql \
 	mod_ssl \
