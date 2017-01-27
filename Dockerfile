@@ -6,13 +6,15 @@ RUN \
 	yum -y update &&\
 	yum -y install \
 	epel-release \
-	python-certbot-apache \
-	php \
 	php-mysql \
 	mod_ssl \
 	less \
 	which &&\
 	yum clean all
+
+RUN \
+	yum -y python-certbot-apache
+        yum clean all
 
 RUN \
         sed -i "s/short_open_tag = Off/short_open_tag = On/g" /etc/php.ini &&\
