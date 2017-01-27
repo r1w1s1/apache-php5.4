@@ -5,17 +5,11 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 RUN \
 	yum -y update &&\
 	yum -y install \
-	epel-release \
 	php-mysql \
 	mod_ssl \
 	less \
 	which &&\
 	yum clean all
-
-RUN \
-	yum -y update &&\
-	yum -y install python2-certbot-apache &&\
-        yum clean all
 
 RUN \
         sed -i "s/short_open_tag = Off/short_open_tag = On/g" /etc/php.ini &&\
