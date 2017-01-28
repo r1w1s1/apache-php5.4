@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/image/ricardson/apache-php5.4.svg)](https://microbadger.com/images/ricardson/apache-php5.4 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/ricardson/apache-php5.4.svg)](https://microbadger.com/images/ricardson/apache-php5.4 "Get your own version badge on microbadger.com")
+[![Docker Pulls](https://img.shields.io/docker/pulls/phpmyadmin/phpmyadmin.svg)][hub] [![](https://images.microbadger.com/badges/image/ricardson/apache-php5.4.svg)](https://microbadger.com/images/ricardson/apache-php5.4 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/ricardson/apache-php5.4.svg)](https://microbadger.com/images/ricardson/apache-php5.4 "Get your own version badge on microbadger.com")
 
 ## Apache Webserver with PHP Support
 
