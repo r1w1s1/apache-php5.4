@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-<h1>Caddy web server.</h1>
+<h1>Apache with PHP Support.</h1>
 <p>If you see PHP info below, Apache with PHP container works.</p>
 
 <?php 
