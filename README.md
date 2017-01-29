@@ -23,8 +23,9 @@ Replace /path/to/php/src with your php sources directory.
 
 ```sh
 $ docker run -d \
-    -v /path/to/php/src:/var/www/html -p 80:80 ricardson/apache-php5.4 \
-    -p 80:80 -p 443:443 \
+    -v /path/to/php/src:/var/www/html \
+    -p 80:80 \
+    --name=apache-php54 \
     ricardson/apache-php5.4
 ```
 
