@@ -1,23 +1,23 @@
-FROM centos:7 
+FROM centos:7
 
 MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 
 RUN \
-	yum -y update &&\
-	yum -y install \
-	php \
-	php-mysql \
-	mod_ssl \
-	less \
-	which &&\
-	yum clean all
+    yum -y update &&\
+    yum -y install --setopt=tsflags=nodocs \
+    php \
+    php-mysql \
+    mod_ssl \
+    less \
+    which &&\
+    yum clean all
 
 RUN \
-        sed -i "s/short_open_tag = Off/short_open_tag = On/g" /etc/php.ini &&\
-        sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 150M/g" /etc/php.ini &&\
-	sed -i "s/post_max_size = 8M/post_max_size = 150M/g" /etc/php.ini &&\
-        sed -i "s/#ServerName www.example.com:80/ServerName localhost:80/g" /etc/httpd/conf/httpd.conf &&\
-	sed -i "s/AllowOverride None/AllowOverride All/g" /etc/httpd/conf/httpd.conf
+    sed -ri 's/#ServerName www.example.com:80/ServerName localhost:80/g' /etc/httpd/conf/httpd.conf \
+    && sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/httpd/conf/httpd.conf \
+    && sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
+	       -e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' \
+	       /etc/httpd/conf/httpd.conf
 
 ADD index.php /var/www/html
 
