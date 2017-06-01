@@ -3,17 +3,15 @@ FROM centos:7
 MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 
 RUN \
-    yum -y update &&\
-    yum -y install --setopt=tsflags=nodocs \
+    yum -y update \
+    && yum -y install --setopt=tsflags=nodocs \
     php \
     php-mysql \
     mod_ssl \
     less \
-    which &&\
-    yum clean all
-
-RUN \
-    sed -ri 's/#ServerName www.example.com:80/ServerName localhost:80/g' /etc/httpd/conf/httpd.conf \
+    which \
+    && yum clean all \
+    && sed -ri 's/#ServerName www.example.com:80/ServerName localhost:80/g' /etc/httpd/conf/httpd.conf \
     && sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/httpd/conf/httpd.conf \
     && sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
 	       -e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' \
