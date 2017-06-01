@@ -30,7 +30,8 @@ $ docker run -d \
     ricardson/apache-php5.4
 ```
 
-Or you can map the your own `php.ini`.
+Or you can map the your own **php.ini**.
+
 
 ```sh
 $ docker run -d \
