@@ -3,7 +3,7 @@
 
 ## LAMP
 
-[CentOS7](https://www.centos.org) or [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) 
+[CentOS7](https://www.centos.org)
 
 
 ## Run the image
